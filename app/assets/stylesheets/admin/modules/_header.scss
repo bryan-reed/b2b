@@ -1,0 +1,63 @@
+.header {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    padding: 0 15px;
+    justify-content: space-between;
+    background-color: $green;
+    a {
+        color: #fff;
+    }
+    &__search {
+        display: none;
+        @include atMedium {
+            display: flex;
+            align-items: center;
+        }
+        width: 450px;
+        input {
+            padding: 5px;
+            width: 100%;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+        }
+    }
+    &__logo {
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        padding: 15px 0;
+        @include atMedium {
+            width: auto;
+        }
+    }
+    &__profile {
+        display: none;
+        @include atMedium {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+    }
+    &__profile:hover &__profile__dropdown {
+        display: block;
+    }
+    &__profile__dropdown {
+        display: none;
+        position: absolute;
+        padding: 15px;
+        top:100%;
+        width: 150px;
+        right: 0;
+        background-color:red;
+        ul {
+            list-style: none;
+            li {
+                padding: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none;
+}
+#admin {
+    display: flex;
+}
+.admin__content {
+    height: 100vh;
+    overflow: auto;
+    margin-top: -48px;
+    padding-top: 63px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 85vw;
+    @include atSmall {
+        width: 100vw;
+    }
+}
+input.text_field {
+    padding: 5px;
+
+}

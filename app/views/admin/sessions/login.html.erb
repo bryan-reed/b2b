@@ -1,0 +1,23 @@
+<% flash.each do |name, msg| %>
+    <%= msg %>
+<% end %>
+<div class="login__container">
+
+<h3>MyAtOnce Login</h3>
+<%= form_for(:session, url: admin_login_path, :html => {class: "login__form"}) do |f|  %>
+    <div class="row">
+        <div class="form__element">
+            <%= f.label :email %>
+            <%= f.email_field :email, placeholder: "Enter your email", class: "text_field" %>
+        </div>
+        <div class="form__element">
+            <%= f.label :password %>
+            <%= f.password_field :password, placeholder: "Enter your password", class: "text_field" %>
+        </div>
+        <div class="form__element">
+            <%= f.submit "Login" , class:"btn" %>
+        </div>
+        
+    </div>
+<% end %>
+</div>

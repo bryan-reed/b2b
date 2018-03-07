@@ -1,0 +1,11 @@
+<h1>Add A Client</h1>
+
+<%= form_for(@client, url: admin_clients_new_path) do |f| %>
+    <%= f.label :name, "Client Name" %>
+    <%= f.text_field :name, placeholder: "Enter the clients name" %>
+    <%= f.label :code, "Client Code" %>
+    <%= f.text_field :code, placeholder: "Enter a client code" %>
+    <%= f.label :custom_url, "Custom URL" %>
+    <%= f.text_field :custom_url, placeholder: "Enter a custom url" %>
+    <%= f.submit @client.new_record? ? "Create Client" : "Update Client", class: "btn" %>
+<% end %>
